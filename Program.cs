@@ -2,18 +2,23 @@
 // (A и B) и возводит число A в натуральную степень B.
 // 3, 5 -> 243 (3⁵)
 // 2, 4 -> 16
-/*
-void AInNaturalDegreeB(int numA, int numB)
+
+int AInNaturalDegreeB(int numA, int numB)
 {
-    double n = Math.Pow(numA, numB);
-    Console.Write(n);
+    int result = 1;
+    for (int i = 1; i <= numB; i++)
+    {
+        result = result * numA;
+    }
+    return result;
 }
+
 Console.Write("Input natural number A: ");
 int numA = Convert.ToInt32(Console.ReadLine());
 Console.Write("Input natural number B: ");
 int numB = Convert.ToInt32(Console.ReadLine());
-AInNaturalDegreeB(numA, numB);
-*/
+int aInNaturalDegreeB = AInNaturalDegreeB(numA, numB);
+Console.WriteLine(aInNaturalDegreeB);
 
 //Задача 27: Напишите программу, которая принимает на вход число
 //и выдаёт сумму цифр в числе.
@@ -39,7 +44,8 @@ Console.WriteLine("The sum of digits in the number is " + sum);
 //m = 5 -> [1, 2, 5, 7, 19]
 //m = 3 -> [6, 1, 33]
 
-//Эту задачу уже разбирали на семинаре?
+//Эту задачу уже разбирали на семинаре? 
+/*
 int[] CreateRandomArray(int size, int minValue, int maxValue)
 {
     int[] array = new int[size];
@@ -53,10 +59,10 @@ int[] CreateRandomArray(int size, int minValue, int maxValue)
 
 void ShowArray(int[] array)
 {
-    for(int i = 0; i < array.Length; i++)
+    for (int i = 0; i < array.Length; i++)
     {
         Console.Write(array[i] + " ");
-     }   
+    }
     Console.WriteLine();
 
 }
@@ -71,5 +77,5 @@ Console.Write("Input max value: ");
 int max = Convert.ToInt32(Console.ReadLine());
 
 int[] myArray = CreateRandomArray(size, min, max);
-ShowArray(myArray);
+ShowArray(myArray);*/
 
